@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { getRandomNumbers } from "./helpers/random";
 import { Location } from "./components/Location";
+import { ResidentList } from "./components/ResidentList";
+import { getRandomNumbers } from "./helpers/random";
+
 
 function App() {
   const [locationInfo, setLocationInfo] = useState(null);
@@ -20,7 +22,8 @@ function App() {
 
   return (
     <main className="bg-black text-white min-h-screen">
-      <Location locationInfo={locationInfo} />
+      <Location locationInfo={locationInfo} setLocationInfo={setLocationInfo} />
+      <ResidentList residents={locationInfo?.residents || []} />
     </main>
   );
 }
