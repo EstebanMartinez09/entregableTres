@@ -19,7 +19,7 @@ export const ResidentCard = ({ residentURL }) => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [residentURL]);
 
   return (
     <article className="border border-[#8EFF8B]">

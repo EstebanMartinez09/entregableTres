@@ -8,6 +8,7 @@ import { getRandomNumbers } from "./helpers/random";
 function App() {
   const [locationInfo, setLocationInfo] = useState(null);
 
+
   useEffect(() => {
     const randomDimension = getRandomNumbers(126);
     axios
