@@ -36,12 +36,12 @@ export const ResidentCard = ({ residentURL }) => {
         <h5 className="font-bold pt-3 pb-1">{residentInfo?.name}</h5>
         <div className="h-[1px] bg-[#084851] w-[97%] "></div>
         </div>
-        <ul className="flex flex-col justify-center p-4 gap-1">
-          <li className="text-[13px]">
-            <span className="text-[#938686] text-[10px]">Specie</span> {residentInfo?.species}{" "}
+        <ul className="flex flex-col   p-4 gap-1">
+          <li className="text-[#938686] text-[10px] flex items-center">
+            Specie <span className="font-medium text-white text-base text-center ml-2">{residentInfo?.species}</span>
           </li>
           <li>
-            <span className="text-[#938686] text-[10px]">Origin</span> {residentInfo?.origin?.name}
+            <span className="text-[#938686] text-[10px]">Origin</span> <span className="line-clamp-1">{residentInfo?.origin?.name}</span>
           </li>
           <li>
             <span className="text-[#938686] text-[10px]">Times appear</span> {residentInfo?.episode?.length} time

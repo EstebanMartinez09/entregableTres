@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-black text-white min-h-screen w-[100%]">
       <Location locationInfo={locationInfo} setLocationInfo={setLocationInfo} />
       <ResidentList residents={locationInfo?.residents || []} />
     </main>

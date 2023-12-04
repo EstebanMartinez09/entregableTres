@@ -19,7 +19,7 @@ export const ResidentList = ({ residents }) => {
 
   return (
     <>
-      <section className="my-10  grid gap-8 grid-cols-[repeat(auto-fill,_250px)] justify-center max-w-[1200px] mx-auto">
+      <section className="my-10  grid gap-8 grid-cols-[repeat(auto-fill,_250px)] justify-center max-w-[1200px] mx-auto bg-[url('/bg/bgMain.jpg')] bg-center">
         {residentsInCurrentPage.map((resident) => (
           <ResidentCard residentURL={resident} key={resident} />
         ))}
