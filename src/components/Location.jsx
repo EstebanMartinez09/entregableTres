@@ -1,4 +1,5 @@
 import axios from "axios";
+import { IconSearch } from '@tabler/icons-react';
 
 export const Location = ({ locationInfo, setLocationInfo }) => {
   const handleSubmit = (e) => {
@@ -15,43 +16,47 @@ export const Location = ({ locationInfo, setLocationInfo }) => {
       });
   };
   return (
-    <section className="flex flex-col justify-center  gap-8  bg-[url('/bg/bgHeader.png')]">
-      <div className="relative">
+    <section className="flex flex-col justify-center   gap-8">
+      <div className=" flex justify-center relative w-screen ">
         <img
-          className="absolute  translate-y-[-42%] z-0"
-          src="/header/Portal.gif"
+          className="animationPortal absolute w-[350px] -top-[180px]  left-[calc(50%-trasnslate-1/2)] sm:w-:[450px] sm:-top-[200px] z-0 md:w-[500px] md:-top-[240px]"
+          src="/header/portal.svg"
           alt=""
         />
-        <div className="z-100 relative px-4 py-8 ">
+        <div className="z-10 relative px-4 py-8 ">
           <img src="/header/logo.svg" alt="" />
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex justify-center " >
-        <div className="flex border border-[#8EFF8B] items-center ">
+      <form onSubmit={handleSubmit} className="mx-[4px]" >
+        <div className="z-20 flex border border-[#8EFF8B] items-center max-w-[700px] mx-auto ">
           <input
             name="newLocation"
             placeholder="Type a location Id..."
             type="text"
-            className="text-[#938686] bg-transparent py-2 px-8 outline-none"
+            className="text-[#938686] text-center bg-transparent py-2 px-8 outline-none w-full"
             required
             autoComplete="off"
           />
-          <button type="submit" className="border-l border-[#8EFF8B] flex justify-center items-center h-[50px] w-[88px] bg-[#8EFF8B80]">
+          <button type="submit" className="border-l border-[#8EFF8B] flex gap-2 justify-center items-center h-[50px] max-w-[120px] w-[100px] bg-[#8EFF8B80] md:w-full hover:bg-[#8EFF8B] hover:text-black">
             <p className="hidden md:block">Search</p>
 
-            <img src="/header/pixelarticons_search.svg" alt="" />
+            <IconSearch size={20} />
           </button>
         </div>
       </form>
-      <article className=" md:border">
-        <h2 className="block text-[#8EFF8B] text-center font-semibold">¡Wellcom to {locationInfo?.name}!</h2>
-        <ul className=" hidden  md:flex ">
-          <li>Type: {locationInfo?.type}</li>
-          <li>Dimension: {locationInfo?.dimension}</li>
-          <li>Population: {locationInfo?.residents.length}</li>
-        </ul>
-      </article>
+
+      <div className="mx-4">
+        <article className=" md:border md: border-[#8EFF8B] md:w-full md:max-w-[900px] md:mx-auto md:p-8 grid gap-4 ">
+          <h2 className="block text-[#8EFF8B] text-center font-semibold">¡Wellcom to {locationInfo?.name}!</h2>
+          <ul className=" hidden  md:flex md:justify-evenly ">
+            <li>Type: {locationInfo?.type}</li>
+            <li>Dimension: {locationInfo?.dimension}</li>
+            <li>Population: {locationInfo?.residents.length}</li>
+          </ul>
+        </article>
+      </div>
+
     </section>
   );
 };
