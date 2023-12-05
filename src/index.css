@@ -20,3 +20,5 @@ main {
         transform: rotate(360deg);
     }
 }
+
+*{border: 1px solid red;}

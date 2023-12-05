@@ -16,8 +16,8 @@ export const Location = ({ locationInfo, setLocationInfo }) => {
       });
   };
   return (
-    <section className="flex flex-col justify-center   gap-8">
-      <div className=" flex justify-center relative w-screen ">
+    <section className="flex flex-col justify-center  overflow-hidden gap-8">
+      <div className=" flex justify-center relative w-screen overflow-hidden">
         <img
           className="animationPortal absolute w-[350px] -top-[180px]  left-[calc(50%-trasnslate-1/2)] sm:w-:[450px] sm:-top-[200px] z-0 md:w-[500px] md:-top-[240px]"
           src="/header/portal.svg"
